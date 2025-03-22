@@ -18,13 +18,19 @@ Goals: Quickly order food during busy workdays.
 Pain Points: Struggles with finding healthy food options and waiting too long for deliveries.
 
 
+
 User Persona 2:
 
 Name: David
+
 Age: 32
+
 Occupation: Freelance Developer
+
 Goals: Discover new restaurants and try different cuisines.
+
 Pain Points: Difficulty finding restaurants with good ratings and affordable prices.
+
 
 Use Cases and User Flows,
 Use Case 1: User Searches for a Restaurant
