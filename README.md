@@ -6,13 +6,16 @@ Purpose:FoodieExpress is an online food delivery platform that allows users to b
 User Personas
 
 User Persona 1:
-Emily
+
+Name : Emily
 Age: 26
 Occupation: Marketing Manager
 Goals: Quickly order food during busy workdays.
 Pain Points: Struggles with finding healthy food options and waiting too long for deliveries.
 
-User Persona 2: David
+User Persona 2:
+
+Name: David
 Age: 32
 Occupation: Freelance Developer
 Goals: Discover new restaurants and try different cuisines.
