@@ -8,10 +8,19 @@ User Personas
 User Persona 1:
 
 Name : Emily
+
+
 Age: 26
+
+
 Occupation: Marketing Manager
+
+
 Goals: Quickly order food during busy workdays.
+
+
 Pain Points: Struggles with finding healthy food options and waiting too long for deliveries.
+
 
 User Persona 2:
 
