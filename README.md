@@ -32,7 +32,9 @@ Goals: Discover new restaurants and try different cuisines.
 Pain Points: Difficulty finding restaurants with good ratings and affordable prices.
 
 
+
 Use Cases and User Flows,
+
 Use Case 1: User Searches for a Restaurant
 
 User opens the website.
