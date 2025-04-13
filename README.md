@@ -90,7 +90,7 @@ Frontend: HTML, CSS, JavaScript
 
 Backend: Node.js, Express.js (optional for Phase 1)
 
-Database: MongoDB (optional for Phase 1)
+Database: Postgres
 
 Project Management and User Testing
 
