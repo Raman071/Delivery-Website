@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, IconButton, InputBase } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Button, IconButton, InputBase, Badge } from '@material-ui/core';
 import { Search, ShoppingCart } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header() {
+export default function Header({ cart }) {
   const classes = useStyles();
 
   return (
@@ -75,8 +75,10 @@ export default function Header() {
             />
           </div>
           <Button color="inherit">Login</Button>
-          <IconButton color="inherit">
-            <ShoppingCart />
+          <IconButton color="inherit" component={Link} to="/checkout">
+            <Badge badgeContent={cart.length} color="secondary">
+              <ShoppingCart />
+            </Badge>
           </IconButton>
         </Toolbar>
       </AppBar>

@@ -1,7 +1,10 @@
-# AdvanceWebDevelopment
-
-| Date        | Time Spent | Activity                                  | Resources Used                                         | Notes/Reflections                                                 |
-|-------------|------------|--------------------------------------------|--------------------------------------------------------|--------------------------------------------------------------------
-| 17.03.2025  | 2h       | Lecture                           | Class Lecture                                          | Learn about Logbook     |
-| 18.03.2025  | 2h         | Planning      | Online                                                  |  | 
-| 19.03.2025  | 1.5h       | Learning Planning Phase      | Online                                                  |  |
+| Date       | Time Spent | Activity                     | Resources Used              | Notes/Reflections                                                       |
+|------------|------------|------------------------------|-----------------------------|--------------------------------------------------------------------------|
+| 17.03.2025 | 2h         | Lecture: Project Requirements| Class materials             | Learned about logbook structure and phase evaluation criteria            |
+| 18.03.2025 | 2h         | Project Planning Phase       | Figma, Miro                 | Created user personas and use cases                                      |
+| 19.03.2025 | 1.5h       | UI Prototyping               | Figma, Material-UI docs     | Designed initial wireframes for all screens                              |
+| 22.03.2025 | 3h         | Database Design              | PostgreSQL, pgAdmin         | Created schema and initialized database                                  |
+| 25.03.2025 | 4h         | Backend Setup                | Node.js, Express            | Implemented REST API endpoints for restaurants                           |
+| 28.03.2025 | 3h         | Frontend Architecture        | React, React Router         | Set up project structure and routing                                     |
+| 01.04.2025 | 5h         | Restaurant List Implementation | Material-UI, Axios         | Completed homepage with restaurant cards                                 |
+| 04.04.2025 | 4h         | Restaurant Detail Page       | React Hooks, CSS Modules    | Implemented menu display with responsive layout                          |
