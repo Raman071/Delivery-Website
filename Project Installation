@@ -1,0 +1,62 @@
+# 🍔 FoodieExpress - Food Delivery Platform
+
+## 📌 Overview
+FoodieExpress is a modern food delivery web application that connects users with local restaurants. It features a seamless ordering experience with restaurant browsing, menu viewing, and secure checkout.
+
+## 🚀 Features
+### Restaurant Discovery
+- Browse restaurants by cuisine type
+- View ratings and delivery times
+- Search by name or location
+
+### Order Management
+- Add items to cart
+- Customize orders
+- Track order status
+
+### User Experience
+- Responsive design
+- Secure authentication
+- Order history
+
+## 🛠 Tech Stack
+| Frontend          | Backend         | Database       |
+|-------------------|-----------------|----------------|
+| React             | Express.js      | PostgreSQL     |
+| Material-UI       | JWT Auth        |                |
+| React Router      | RESTful API     |                |
+|                   | Node.js         |                |
+
+## 🏁 Getting Started
+
+### Prerequisites
+- Node.js v16+
+- PostgreSQL 12+
+- npm or yarn
+
+### Installation
+1. Clone the repository
+git clone https://github.com/Raman071/Delivery-Website
+
+cd foodie-express
+
+### Install dependencies
+# Backend
+cd server
+npm install
+
+# Frontend
+cd ../client
+npm install
+
+### Running the App
+# Start the backend:
+cd server
+nodemon index.js
+
+# Start the frontend:
+cd client
+npm start
+
+
+Open http://localhost:3000 in your browser.
