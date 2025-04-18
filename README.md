@@ -50,33 +50,31 @@ Make sure you have the following installed:
 ### 📦 Installation
 
 1. **Clone the repository:**
-   ```bash
+   ```
    git clone https://github.com/Raman071/Delivery-Website.git
    cd foodie-express
 
 2. Install backend dependencies:
-    ```bash
+    ```
     cd server
     npm install
 
 3. Install frontend dependencies:
-    ```bash
+    ```
     cd ../client
     npm install
 
 ### ▶️ Running the App
-    Start the backend server:
-    ```bash
+   Start the backend server:
+    ```
     cd server
     nodemon index.js
-    # or if nodemon isn't installed
-    # node index.js
-
+    ```
     Start the frontend development server:
-    ```bash
+    ```
     cd ../client
-    npm start
+    npm start```
 
 ### 🌐 Access the App
 Open your browser and navigate to:
-http://localhost:3000
+``` http://localhost:3000 ```
