@@ -4,6 +4,7 @@
 FoodieExpress is a modern food delivery web application that connects users with local restaurants. It features a seamless ordering experience with restaurant browsing, menu viewing, and secure checkout.
 
 ## 🚀 Features
+
 ### Restaurant Discovery
 - Browse restaurants by cuisine type
 - View ratings and delivery times
@@ -20,6 +21,7 @@ FoodieExpress is a modern food delivery web application that connects users with
 - Order history
 
 ## 🛠 Tech Stack
+
 | Frontend          | Backend         | Database       |
 |-------------------|-----------------|----------------|
 | React             | Express.js      | PostgreSQL     |
@@ -35,28 +37,33 @@ FoodieExpress is a modern food delivery web application that connects users with
 - npm or yarn
 
 ### Installation
-1. Clone the repository
+
+1. Clone the repository:
+```bash
 git clone https://github.com/Raman071/Delivery-Website
-
 cd foodie-express
+Install backend dependencies:
 
-### Install dependencies
-# Backend
+bash
 cd server
 npm install
+Install frontend dependencies:
 
-# Frontend
+bash
 cd ../client
 npm install
+Running the App
+Start the backend server:
 
-### Running the App
-# Start the backend:
+bash
 cd server
 nodemon index.js
+# or use regular node if you don't have nodemon
+# node index.js
+Start the frontend development server:
 
-# Start the frontend:
-cd client
+bash
+cd ../client
 npm start
-
-
+Access the application:
 Open http://localhost:3000 in your browser.
