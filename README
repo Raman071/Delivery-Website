@@ -1,69 +1,82 @@
 # 🍔 FoodieExpress - Food Delivery Platform
 
 ## 📌 Overview
-FoodieExpress is a modern food delivery web application that connects users with local restaurants. It features a seamless ordering experience with restaurant browsing, menu viewing, and secure checkout.
+
+**FoodieExpress** is a modern web-based food delivery platform that connects users with local restaurants. It offers a smooth ordering experience, from browsing restaurants and exploring menus to secure checkout and order tracking.
+
+---
 
 ## 🚀 Features
 
-### Restaurant Discovery
-- Browse restaurants by cuisine type
-- View ratings and delivery times
-- Search by name or location
+### 🔍 Restaurant Discovery
+- Browse restaurants by **cuisine type**
+- View **ratings** and **estimated delivery times**
+- **Search** by restaurant name or location
 
-### Order Management
-- Add items to cart
-- Customize orders
-- Track order status
+### 🛒 Order Management
+- **Add items** to cart
+- **Customize** orders (e.g., add-ons, special instructions)
+- **Track order** status in real time
 
-### User Experience
-- Responsive design
-- Secure authentication
-- Order history
+### 💡 User Experience
+- **Responsive** design for all devices
+- **Secure authentication** using JWT
+- View **past orders** in order history
+
+---
 
 ## 🛠 Tech Stack
 
 | Frontend          | Backend         | Database       |
 |-------------------|-----------------|----------------|
-| React             | Express.js      | PostgreSQL     |
-| Material-UI       | JWT Auth        |                |
-| React Router      | RESTful API     |                |
-|                   | Node.js         |                |
+| React             | Node.js         | PostgreSQL     |
+| Material-UI       | Express.js      |                |
+| React Router      | JWT Auth        |                |
+| Axios             | RESTful API     |                |
+
+---
 
 ## 🏁 Getting Started
 
-### Prerequisites
-- Node.js v16+
-- PostgreSQL 12+
-- npm or yarn
+### ✅ Prerequisites
+Make sure you have the following installed:
 
-### Installation
+- **Node.js** v16+
+- **PostgreSQL** 12+
+- **npm** or **yarn**
 
-1. Clone the repository:
-```bash
-git clone https://github.com/Raman071/Delivery-Website
-cd foodie-express
-Install backend dependencies:
+---
 
-bash
-cd server
-npm install
-Install frontend dependencies:
+### 📦 Installation
 
-bash
-cd ../client
-npm install
-Running the App
-Start the backend server:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Raman071/Delivery-Website.git
+   cd foodie-express
 
-bash
-cd server
-nodemon index.js
-# or use regular node if you don't have nodemon
-# node index.js
-Start the frontend development server:
+2. Install backend dependencies:
+    ```bash
+    cd server
+    npm install
 
-bash
-cd ../client
-npm start
-Access the application:
-Open http://localhost:3000 in your browser.
+3. Install frontend dependencies:
+    ```bash
+    cd ../client
+    npm install
+
+### ▶️ Running the App
+    Start the backend server:
+    ```bash
+    cd server
+    nodemon index.js
+    # or if nodemon isn't installed
+    # node index.js
+
+    Start the frontend development server:
+    ```bash
+    cd ../client
+    npm start
+
+### 🌐 Access the App
+Open your browser and navigate to:
+http://localhost:3000
