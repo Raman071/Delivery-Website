@@ -56,8 +56,8 @@ CREATE TABLE order_items (
 INSERT INTO restaurants (name, cuisine_type, location, rating, delivery_time, image_url)
 VALUES 
   ('Burger Palace', 'Fast Food', 'Kokkola', 4.5, '20-30 min', 'https://www.svgrepo.com/show/287733/burger.svg'),
-  ('Pizza Heaven', 'Italian', 'Vaasa', 4.2, '25-35 min', 'https://k40lasercutter.com/wp-content/uploads/2024/09/Free-Cute-Mascot-Pizza-SVG-Black-and-White-SVG-Vector-File-for-Laser-Cutting.jpg'),
-  ('Sushi World', 'Japanese', 'Oulu', 4.7, '30-40 min', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc3h67KDifJh4bnap6SKJXavff4FDKgqYzGw&s');
+  ('Pizza Heaven', 'Fast Food', 'Vaasa', 4.2, '25-35 min', 'https://k40lasercutter.com/wp-content/uploads/2024/09/Free-Cute-Mascot-Pizza-SVG-Black-and-White-SVG-Vector-File-for-Laser-Cutting.jpg'),
+  ('Sushi World', 'Asian', 'Oulu', 4.7, '30-40 min', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc3h67KDifJh4bnap6SKJXavff4FDKgqYzGw&s');
 
 INSERT INTO menu_items (restaurant_id, name, description, price, category)
 VALUES

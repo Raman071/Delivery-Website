@@ -11,7 +11,8 @@ import {
   CircularProgress,
   Chip,
   Box,
-  Button
+  Button,
+  TextField
 } from '@material-ui/core';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -19,24 +20,40 @@ import { Star, AccessTime, LocationOn } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   hero: {
-    backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://source.unsplash.com/1600x900/?food,delivery)',
-    height: '70vh',
-    minHeight: '450px',
+    backgroundImage: 'url(https://t3.ftcdn.net/jpg/02/52/12/40/360_F_252124067_aCtp9ZD934RboKmjJzkXiwYDL7XkNjpn.jpg)',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    height: '70vh',
+    minHeight: '450px',
+    position: 'relative',
     color: '#fff',
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
     alignItems: 'center',
-    padding: theme.spacing(6),
-    marginBottom: theme.spacing(8),
+    justifyContent: 'center',
     borderRadius: '0 0 20px 20px',
     boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
+    marginBottom: theme.spacing(8),
+    overflow: 'hidden',
+  },
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    zIndex: 1,
   },
   heroContent: {
-    maxWidth: 800,
+    position: 'relative',
+    zIndex: 2,
     textAlign: 'center',
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    padding: theme.spacing(4),
+    borderRadius: 12,
+    backdropFilter: 'blur(5px)',
+    maxWidth: 800,
   },
   heroButton: {
     marginTop: theme.spacing(4),
@@ -106,12 +123,23 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     height: '300px',
   },
+  filterContainer: {
+    marginBottom: theme.spacing(4),
+    textAlign: 'center',
+  },
+  filterButton: {
+    margin: theme.spacing(0.5),
+    borderRadius: 20,
+    textTransform: 'none',
+  },
 }));
 
 export default function HomePage() {
   const classes = useStyles();
   const [restaurants, setRestaurants] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   useEffect(() => {
     const fetchRestaurants = async () => {
@@ -128,10 +156,20 @@ export default function HomePage() {
     fetchRestaurants();
   }, []);
 
+  const filteredRestaurants = restaurants.filter((restaurant) => {
+    const matchesSearch = restaurant.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                          restaurant.cuisine_type.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory ? restaurant.cuisine_type === selectedCategory : true;
+    return matchesSearch && matchesCategory;
+  });
+
+  const categories = ['Fast Food', 'Vegetarian', 'Desserts', 'Asian', 'Mexican', 'Healthy'];
+
   return (
     <div>
       {/* Hero Section */}
       <div className={classes.hero}>
+        <div className={classes.overlay}></div>
         <div className={classes.heroContent}>
           <Typography variant="h2" component="h1" gutterBottom style={{ fontWeight: 700 }}>
             Discover the Best Food in Town
@@ -145,26 +183,51 @@ export default function HomePage() {
             size="large" 
             className={classes.heroButton}
             component={Link}
-            to="/restaurant/1" 
+            to="/restaurant/1"
           >
             Order Now
           </Button>
         </div>
       </div>
 
-      {/* Restaurants Section */}
+      {/* Search and Category Filter Section */}
       <Container maxWidth="lg">
+        <div className={classes.filterContainer}>
+          <TextField
+            label="Search restaurants"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+
+          {/* Category Buttons */}
+          {categories.map((category) => (
+            <Button 
+              key={category}
+              variant={selectedCategory === category ? "contained" : "outlined"}
+              color="primary"
+              className={classes.filterButton}
+              onClick={() => setSelectedCategory(selectedCategory === category ? '' : category)}
+            >
+              {category}
+            </Button>
+          ))}
+        </div>
+
+        {/* Restaurants Section */}
         <Typography variant="h4" className={classes.sectionTitle}>
           Popular Restaurants
         </Typography>
-        
+
         {loading ? (
           <div className={classes.loadingContainer}>
             <CircularProgress color="primary" size={60} />
           </div>
         ) : (
           <Grid container spacing={4}>
-            {restaurants.map((restaurant) => (
+            {filteredRestaurants.map((restaurant) => (
               <Grid item xs={12} sm={6} md={4} key={restaurant.id}>
                 <Card className={classes.card} elevation={3}>
                   <CardActionArea component={Link} to={`/restaurant/${restaurant.id}`}>
@@ -177,28 +240,28 @@ export default function HomePage() {
                       <Typography gutterBottom variant="h6" component="h2" className={classes.restaurantName}>
                         {restaurant.name}
                       </Typography>
-                      
+
                       <Chip 
                         label={restaurant.cuisine_type} 
                         size="small" 
                         color="secondary" 
                         className={classes.chip}
                       />
-                      
+
                       <Box className={classes.infoContainer}>
                         <Star color="primary" className={classes.infoIcon} />
                         <Typography variant="body2" color="textSecondary">
                           {restaurant.rating}
                         </Typography>
                       </Box>
-                      
+
                       <Box className={classes.infoContainer}>
                         <AccessTime className={classes.infoIcon} />
                         <Typography variant="body2" color="textSecondary">
                           {restaurant.delivery_time}
                         </Typography>
                       </Box>
-                      
+
                       <Box className={classes.infoContainer}>
                         <LocationOn className={classes.infoIcon} />
                         <Typography variant="body2" color="textSecondary">
