@@ -65,13 +65,6 @@
 - The key implementation challenge was installing real-time order tracking because developing this was designated as an important future update requirement.
 - Gained significant experience working with full-stack development and JWT-based authentication.
 
-### Future Improvements
-- Implement real-time order tracking with **Socket.IO** and WebSockets.
-- Add user reviews and restaurant feedback system.
-- Build an Admin Dashboard for restaurant owners to manage menus and orders.
-- Improve mobile responsiveness and UX for small devices.
-- Implement push notifications for order updates.
-
 ---
 
 # 🎯 Summary
